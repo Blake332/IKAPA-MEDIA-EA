@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ikapa Executive Travels - Your Gateway to World Wonders</title>
+    <meta name="description"
+        content="Experience tailor-made travels curated to suit your travel dreams. Personalized Safari Itineraries, VIP Travel Planning, and Comprehensive Ground Handling." />
+    <link rel="icon" href="images/favicon.svg" sizes="32x32" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        :root {
+            /* Vibrant Travel Palette */
+            --travel-primary: #008080;
+            /* Tropical Teal */
+            --travel-secondary: #ffbf00;
+            /* Amber Gold */
+            --travel-accent: #ff7f50;
+            /* Coral */
+            --travel-bg: #fdfaf5;
+            --travel-text: #1e293b;
+            --travel-muted: #64748b;
+            --travel-navy: #0f172a;
+
+            /* Overriding main site variables for this page */
+            --brand: var(--travel-primary);
+            --brand-dark: #006666;
+            --accent: var(--travel-secondary);
+            --bg: var(--travel-bg);
+            --surface-2: #f8f1e5;
+            --surface-3: #e0f2f1;
+        }
+
+        body {
+            background-color: var(--travel-bg);
+            color: var(--travel-text);
+            font-family: 'Inter', 'Roboto', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Glass Navbar (Consistent with Main Site) */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.8) !important;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+        }
+
+        .nav-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100px;
+        }
+
+        .header-logo-travel {
+            height: 70px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            color: #334155 !important;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--travel-primary) !important;
+        }
+
+        /* Hero Section */
+        /* Hero Section Enhancements */
+        .hero-travel {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.4), rgba(255, 191, 0, 0.2)), url('images/cover page travels.jpg') center/cover no-repeat;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 60px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 900px;
+            margin: 0 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-travel h1 {
+            font-size: clamp(3rem, 10vw, 5.5rem);
+            font-weight: 900;
+            letter-spacing: -0.01em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #fff 30%, var(--travel-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-travel p {
+            font-size: 1.4rem;
+            letter-spacing: 0.5em;
+            color: #000000;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+            opacity: 0.9;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .btn-primary.glow {
+            position: relative;
+            background: linear-gradient(135deg, var(--travel-primary), #20b2aa);
+            box-shadow: 0 0 20px rgba(0, 128, 128, 0.4);
+            border: none;
+            overflow: hidden;
+        }
+
+        .btn-primary.glow::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg);
+            transition: 0.5s;
+            pointer-events: none;
+        }
+
+        .btn-primary.glow:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary.glow:hover {
+            box-shadow: 0 0 30px rgba(0, 128, 128, 0.6);
+            transform: translateY(-3px) scale(1.02);
+        }
+
+        /* Sections */
+        .travel-section {
+            padding: 100px 0;
+        }
+
+        .section-alt {
+            background-color: var(--surface-2);
+        }
+
+        .section-cyan {
+            background-color: var(--surface-3);
+        }
+
+        .section-title {
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            color: var(--travel-navy);
+            margin-bottom: 20px;
+        }
+
+        .eyebrow {
+            color: var(--travel-accent);
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Cards & Components */
+        .service-item,
+        .package-card,
+        .trip-category {
+            background: #fff;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .service-item:hover,
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border-color: var(--travel-primary);
+        }
+
+        .service-item i {
+            font-size: 2.8rem;
+            color: var(--travel-primary);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .grid-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* Package Specifics */
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .package-card {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .package-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .package-content {
+            padding: 30px;
+            flex-grow: 1;
+        }
+
+        .package-tag {
+            background: var(--travel-secondary);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: inline-block;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .package-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .package-price {
+            color: var(--travel-navy);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .package-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .package-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--travel-navy);
+            margin-bottom: 12px;
+        }
+
+        .package-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: var(--travel-muted);
+            font-weight: 500;
+        }
+
+        .package-meta span i {
+            color: var(--travel-primary);
+            margin-right: 5px;
+        }
+
+        .package-price {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--travel-primary);
+        }
+
+        .package-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 25px;
+            font-size: 0.9rem;
+            color: var(--travel-muted);
+        }
+
+        .package-features li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .package-features li i {
+            color: var(--travel-secondary);
+            font-size: 0.85rem;
+        }
+
+        .package-btn {
+            margin-top: auto;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.85rem;
+        }
+
+        /* Destination Gallery */
+        .trip-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .trip-card {
+            background: #fff;
+            padding: 35px;
+            border-radius: 24px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .trip-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border-color: var(--travel-primary);
+        }
+
+        .trip-card i {
+            font-size: 2.5rem;
+            color: var(--travel-primary);
+        }
+
+        .trip-card h3 {
+            font-size: 1.5rem;
+            color: var(--travel-navy);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .trip-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .trip-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+            color: var(--travel-muted);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trip-card li i {
+            font-size: 0.8rem;
+            color: var(--travel-secondary);
+        }
+
+        .trip-card li:last-child {
+            border-bottom: none;
+        }
+
+        /* Essential Box */
+        .essentials-container {
+            background: var(--travel-navy);
+            color: #fff;
+            padding: 80px;
+            border-radius: 40px;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--travel-secondary);
+        }
+
+        .essentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .essential-item {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .essential-item i {
+            font-size: 2.5rem;
+            color: var(--travel-secondary);
+        }
+
+        .essential-item h4 {
+            color: #fff;
+            font-size: 1.3rem;
+            margin: 0;
+            letter-spacing: 0.05em;
+        }
+
+        .essential-item p {
+            color: #94a3b8;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Footer Customization */
+        footer h4 {
+            color: var(--travel-secondary);
+            margin-bottom: 25px;
+        }
+
+        .footer-logo {
+            height: 80px;
+            width: auto;
+            margin-bottom: 20px;
+        }
+
+        .social-btn {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1) !important;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .social-btn:hover {
+            background: var(--travel-primary) !important;
+            transform: scale(1.1) rotate(8deg);
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--travel-primary), #006666);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .cta-banner p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn-secondary {
+            background: var(--travel-secondary);
+            color: var(--travel-navy);
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            filter: brightness(1.1);
+        }
+
+
+
+        @media (max-width: 768px) {
+            .nav-wrap {
+                min-height: 80px;
+            }
+
+            .header-logo-travel {
+                height: 50px;
+            }
+
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-travel {
+                min-height: 70vh;
+            }
+
+            .travel-section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container nav-wrap">
+                <a href="index.html" class="logo"><img src="images/IKAPA_FAIR-removebg-preview (1).jpg"
+                        alt="ikapaMedia East Africa" class="header-logo-travel" /></a>
+                <ul class="nav-links">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#events">Events</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="executive-travels.html" class="active">Ikapa Executive Travel</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-travel">
+            <div class="hero-glass reveal">
+                <h1>IKAPA EXECUTIVE TRAVELS</h1>
+                <p>YOUR GATEWAY TO WORLD WONDERS</p>
+                <a href="#overview" class="btn btn-primary glow">Discover More</a>
+            </div>
+        </section>
+
+
+        <section id="overview" class="travel-section section-alt">
+            <div class="container intro-grid">
+                <div class="intro-text reveal">
+                    <p class="eyebrow">Experience Luxury</p>
+                    <h2 class="section-title">Traveling With Why We Travel</h2>
+                    <p>
+                        Experience tailor-made travels curated to suit your travel dreams. Whether you seek romance,
+                        family
+                        bonding, cultural discovery, or adventure, our expert team provides a seamless journey.
+                    </p>
+                    <div class="about-highlights">
+                        <article class="highlight-item">
+                            <div class="highlight-icon"><i class="fas fa-check"></i></div>
+                            <div class="highlight-content">
+                                <h3>Personalized Experience</h3>
+                                <p>Personalized Safari Itineraries & Flying Safari Packages.</p>
+                            </div>
+                        </article>
+                        <article class="highlight-item">
+                            <div class="highlight-icon"><i class="fas fa-id-badge"></i></div>
+                            <div class="highlight-content">
+                                <h3>Certified Guides</h3>
+                                <p>Silver-Certified Driver-Guides & Comprehensive Ground Handling.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="intro-image reveal">
+                    <img src="images/vehicle.jpg" alt="Travel Overview" />
+                </div>
+            </div>
+        </section>
+
+        <section class="travel-section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2 class="section-title">Our Vision & Mission</h2>
+                    <p>Exemplary services at affordable cost.</p>
+                </div>
+                <div class="grid-services">
+                    <div class="service-item reveal">
+                        <i class="fas fa-eye"></i>
+                        <h3>Our Vision</h3>
+                        <p>To be leading tour and travel company in East Africa, providing quality tourism packages and
+                            exemplary related services at affordable cost.</p>
+                    </div>
+                    <div class="service-item reveal">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>Our Mission</h3>
+                        <p>To provide creative travel packages through reasonable and suitable tourism business practice
+                            and excellent customer services.</p>
+                    </div>
+                    <div class="service-item reveal">
+                        <i class="fas fa-heart"></i>
+                        <h3>Our Values</h3>
+                        <p>A professional dedicated company that guarantees quality, consistency and competitiveness
+                            while sharing benefits with the community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="travel-section section-cyan">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2 class="section-title">Main Services</h2>
+                    <p>Comprehensive travel solutions for corporate and leisure.</p>
+                </div>
+                <div class="grid-services">
+                    <div class="service-item reveal">
+                        <i class="fas fa-passport"></i>
+                        <h3>Visa Advisory</h3>
+                        <p>Visa advisory and facilitation service- provides Visa facilitation and consultation services.
+                        </p>
+                    </div>
+                    <div class="service-item reveal">
+                        <i class="fas fa-plane"></i>
+                        <h3>Flights</h3>
+                        <p>Booking and management of flights, airport facilitation, and executive airport transfers.</p>
+                    </div>
+                    <div class="service-item reveal">
+                        <i class="fas fa-hotel"></i>
+                        <h3>Accommodation</h3>
+                        <p>Arranging hotel stays and other luxury accommodation options worldwide.</p>
+                    </div>
+                    <div class="service-item reveal">
+                        <i class="fas fa-car"></i>
+                        <h3>Car Hire</h3>
+                        <p>Providing Executive and general vehicle rental services for any occasion.</p>
+                    </div>
+                    <div class="service-item reveal">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Tours</h3>
+                        <p>Organizing day tours and long-distance tours in Kenya and beyond.</p>
+                    </div>
+                    <div class="service-item reveal">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Business Forums</h3>
+                        <p>Trade Fairs, Trade missions, and High-Level Business meetings coordination.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="travel-section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Curated For You</p>
+                    <h2 class="section-title">Exclusive Travel Packages</h2>
+                    <p>Hand-picked destinations with all-inclusive luxury experiences.</p>
+                </div>
+                <div class="package-grid">
+                    <!-- Diani Beach -->
+                    <article class="package-card reveal">
+                        <img src="images/diani.jpg" alt="Diani Beach" class="package-img" />
+                        <div class="package-content">
+                            <span class="package-tag">Coastal Luxury</span>
+                            <h3 class="package-title">3 Days Diani Beach Escape</h3>
+                            <div class="package-meta">
+                                <span><i class="fas fa-clock"></i> 3 Days / 2 Nights</span>
+                                <span class="package-price">From $450</span>
+                            </div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> 5-Star Beach Resort</li>
+                                <li><i class="fas fa-check"></i> Half-board meals</li>
+                                <li><i class="fas fa-check"></i> Airport Transfers</li>
+                                <li><i class="fas fa-check"></i> Sunset Dhow Cruise</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary package-btn">Enquire Now</a>
+                        </div>
+                    </article>
+
+                    <!-- Mombasa -->
+                    <article class="package-card reveal">
+                        <img src="images/mombasa.jpg" alt="Mombasa" class="package-img" />
+                        <div class="package-content">
+                            <span class="package-tag">History & Beach</span>
+                            <h3 class="package-title">4 Days Mombasa Heritage</h3>
+                            <div class="package-meta">
+                                <span><i class="fas fa-clock"></i> 4 Days / 3 Nights</span>
+                                <span class="package-price">From $380</span>
+                            </div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Fort Jesus Guided Tour</li>
+                                <li><i class="fas fa-check"></i> Old Town Exploration</li>
+                                <li><i class="fas fa-check"></i> Beachfront Hotel</li>
+                                <li><i class="fas fa-check"></i> Haller Park Visit</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary package-btn">Enquire Now</a>
+                        </div>
+                    </article>
+
+                    <!-- Malindi -->
+                    <article class="package-card reveal">
+                        <img src="images/malindi.jpg" alt="Malindi" class="package-img" />
+                        <div class="package-content">
+                            <span class="package-tag">Tropical Paradise</span>
+                            <h3 class="package-title">3 Days Malindi Getaway</h3>
+                            <div class="package-meta">
+                                <span><i class="fas fa-clock"></i> 3 Days / 2 Nights</span>
+                                <span class="package-price">From $420</span>
+                            </div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Marine Park Snorkeling</li>
+                                <li><i class="fas fa-check"></i> Marafa Hell's Kitchen</li>
+                                <li><i class="fas fa-check"></i> Luxury Villa Stay</li>
+                                <li><i class="fas fa-check"></i> Italian Dining Exp</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary package-btn">Enquire Now</a>
+                        </div>
+                    </article>
+
+                    <!-- Lake Naivasha -->
+                    <article class="package-card reveal">
+                        <img src="images/naivasha.jpg" alt="Lake Naivasha" class="package-img" />
+                        <div class="package-content">
+                            <span class="package-tag">Rift Valley Adventure</span>
+                            <h3 class="package-title">2 Days Naivasha Retreat</h3>
+                            <div class="package-meta">
+                                <span><i class="fas fa-clock"></i> 2 Days / 1 Night</span>
+                                <span class="package-price">From $250</span>
+                            </div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Crescent Island Hike</li>
+                                <li><i class="fas fa-check"></i> Boat Ride & Hippos</li>
+                                <li><i class="fas fa-check"></i> Hell's Gate Cycling</li>
+                                <li><i class="fas fa-check"></i> Lakeside Lodge</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary package-btn">Enquire Now</a>
+                        </div>
+                    </article>
+
+                    <!-- Lake Nakuru -->
+                    <article class="package-card reveal">
+                        <img src="images/nakuru.jpg" alt="Lake Nakuru" class="package-img" />
+                        <div class="package-content">
+                            <span class="package-tag">Wildlife & Birds</span>
+                            <h3 class="package-title">2 Days Lake Nakuru Safari</h3>
+                            <div class="package-meta">
+                                <span><i class="fas fa-clock"></i> 2 Days / 1 Night</span>
+                                <span class="package-price">From $290</span>
+                            </div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Flamingo Watching</li>
+                                <li><i class="fas fa-check"></i> Rhino Sanctuary Drive</li>
+                                <li><i class="fas fa-check"></i> Game Park Fees</li>
+                                <li><i class="fas fa-check"></i> Safari Lodge Stay</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary package-btn">Enquire Now</a>
+                        </div>
+                    </article>
+
+                    <!-- Maasai Mara -->
+                    <article class="package-card reveal">
+                        <img src="images/maasai.jpg" alt="Maasai Mara" class="package-img" />
+                        <div class="package-content">
+                            <span class="package-tag">Iconic Safari</span>
+                            <h3 class="package-title">3 Days Ultimate Maasai Mara</h3>
+                            <div class="package-meta">
+                                <span><i class="fas fa-clock"></i> 3 Days / 2 Nights</span>
+                                <span class="package-price">From $550</span>
+                            </div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Full Day Game Drives</li>
+                                <li><i class="fas fa-check"></i> Maasai Village Visit</li>
+                                <li><i class="fas fa-check"></i> All Meals Included</li>
+                                <li><i class="fas fa-check"></i> Luxury Tented Camp</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary package-btn">Enquire Now</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="upcoming" class="travel-section section-alt">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Plan Ahead</p>
+                    <h2 class="section-title">2026 Upcoming Trips</h2>
+                    <p>Explore the world in style with iKapa Executive Travels.</p>
+                </div>
+                <div class="trip-list">
+                    <!-- Kenya -->
+                    <div class="trip-card reveal">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Kenya <i class="fas fa-arrow-right"></i></h3>
+                        <ul>
+                            <li><i class="fas fa-sun"></i> Maasai Mara – Wildlife</li>
+                            <li><i class="fas fa-sun"></i> Amboseli – Elephants</li>
+                            <li><i class="fas fa-sun"></i> Diani Beach – Relax</li>
+                            <li><i class="fas fa-sun"></i> Lake Naivasha – Boat Rides</li>
+                        </ul>
+                    </div>
+
+                    <!-- South Africa -->
+                    <div class="trip-card reveal">
+                        <i class="fas fa-mountain"></i>
+                        <h3>South Africa <i class="fas fa-arrow-right"></i></h3>
+                        <ul>
+                            <li><i class="fas fa-sun"></i> Kruger Park – Game Drives</li>
+                            <li><i class="fas fa-sun"></i> Cape Town – Table Mountain</li>
+                            <li><i class="fas fa-sun"></i> Garden Route – Scenic</li>
+                            <li><i class="fas fa-sun"></i> Stellenbosch – Wine Tours</li>
+                        </ul>
+                    </div>
+
+                    <!-- Italy -->
+                    <div class="trip-card reveal">
+                        <i class="fas fa-landmark"></i>
+                        <h3>Italy <i class="fas fa-arrow-right"></i></h3>
+                        <ul>
+                            <li><i class="fas fa-sun"></i> Rome – Colosseum</li>
+                            <li><i class="fas fa-sun"></i> Venice – Gondola Rides</li>
+                            <li><i class="fas fa-sun"></i> Florence – Art & Tuscany</li>
+                            <li><i class="fas fa-sun"></i> Amalfi Coast – Beauty</li>
+                        </ul>
+                    </div>
+
+                    <!-- Zanzibar -->
+                    <div class="trip-card reveal">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <h3>Zanzibar <i class="fas fa-arrow-right"></i></h3>
+                        <ul>
+                            <li><i class="fas fa-sun"></i> Stone Town – History</li>
+                            <li><i class="fas fa-sun"></i> Nungwi – Beaches</li>
+                            <li><i class="fas fa-sun"></i> Spice Plantations</li>
+                            <li><i class="fas fa-sun"></i> Mnemba Atoll – Diving</li>
+                        </ul>
+                    </div>
+
+                    <!-- Germany -->
+                    <div class="trip-card reveal">
+                        <i class="fas fa-castle"></i>
+                        <h3>Germany <i class="fas fa-arrow-right"></i></h3>
+                        <ul>
+                            <li><i class="fas fa-sun"></i> Berlin – History</li>
+                            <li><i class="fas fa-sun"></i> Munich – Markets</li>
+                            <li><i class="fas fa-sun"></i> Cologne – Cathedral</li>
+                            <li><i class="fas fa-sun"></i> Frankfurt – Fairs</li>
+                        </ul>
+                    </div>
+
+                    <!-- Canada -->
+                    <div class="trip-card reveal">
+                        <i class="fas fa-snowflake"></i>
+                        <h3>Canada <i class="fas fa-arrow-right"></i></h3>
+                        <ul>
+                            <li><i class="fas fa-sun"></i> Banff – Snowy Mountains</li>
+                            <li><i class="fas fa-sun"></i> Niagara Falls – Views</li>
+                            <li><i class="fas fa-sun"></i> Quebec City – Charm</li>
+                            <li><i class="fas fa-sun"></i> Whistler – Skiing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="travel-section">
+            <div class="container">
+                <div class="essentials-container reveal">
+                    <div class="section-head text-white">
+                        <p class="eyebrow">Expert Advice</p>
+                        <h2 class="section-title text-white">Travel Essentials & Etiquette</h2>
+                        <p class="text-slate-400">Everything you need for a seamless journey.</p>
+                    </div>
+                    <div class="essentials-grid">
+                        <div class="essential-item">
+                            <i class="fas fa-heartbeat"></i>
+                            <h4>Health & Safety</h4>
+                            <p>Pack insect repellent, malaria prophylaxis, and high-quality sunscreen for your safari.
+                            </p>
+                        </div>
+                        <div class="essential-item">
+                            <i class="fas fa-tshirt"></i>
+                            <h4>Smart Packing</h4>
+                            <p>Light, neutral-colored clothes are best for comfort and discreet wildlife viewing.</p>
+                        </div>
+                        <div class="essential-item">
+                            <i class="fas fa-globe-africa"></i>
+                            <h4>Local Culture</h4>
+                            <p>Respect local customs, ask before taking photos, and dress modestly in local villages.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="cta-banner">
+            <div class="container cta-wrap reveal">
+                <h2>Experience luxury travel with Ikapa Executive Travels!</h2>
+                <p>Explore the world in style.</p>
+                <a href="#contact" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <img src="images/IKAPA_FAIR-removebg-preview (1).jpg" alt="Logo" class="footer-logo" />
+                <p>
+                    Founded: 2012 | Headquarters: Nairobi, Kenya. Owned by Ikapa Media East Africa Ltd.
+                </p>
+                <div class="social-grid">
+                    <a href="#" class="social-btn fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn tw"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-btn ln"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-btn yt"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company Details</h4>
+                <ul class="footer-links">
+                    <li>Riverside Drive, Westlands</li>
+                    <li>P.O.BOX 614-00521 Nairobi</li>
+                    <li>+254 700 169 429</li>
+                    <li>ikapa.exectravels@gmail.com</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your Email" required />
+                    <button type="submit" class="btn btn-primary">Go</button>
+                </form>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2026 iKapaMedia East Africa. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/254700169429" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
